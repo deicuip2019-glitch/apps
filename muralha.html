@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muralha Paulista</title>
   <style>
-    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #121212; color: #fff; text-align: center; }
-    .btn { background: #1a73e8; color: #fff; padding: 16px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; margin-top: 20px; }
+    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #121212; color: #fff; text-align: center; padding: 20px; }
+    .btn { background: #1a73e8; color: #fff; padding: 16px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 10px 0; width: 100%; max-width: 300px; }
+    .btn-sec { background: #2e7d32; }
   </style>
 </head>
 <body>
-  <p>Redirecionando para o Muralha Paulista...</p>
-  <a id="abrir" class="btn" href="intent://#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=br.gov.ssp.detecta;end">
-    Abrir Aplicativo Agora
+  <p>Escolha uma opção para abrir o Muralha Paulista:</p>
+  
+  <a class="btn" href="intent://open#Intent;scheme=detecta;package=br.gov.ssp.detecta;end">
+    Opção 1: Abrir via Esquema (Detecta)
   </a>
 
-  <script>
-    setTimeout(function() {
-      document.getElementById('abrir').click();
-    }, 300);
-  </script>
+  <a class="btn btn-sec" href="intent://open#Intent;scheme=muralha;package=br.gov.ssp.detecta;end">
+    Opção 2: Abrir via Esquema (Muralha)
+  </a>
 </body>
 </html>
